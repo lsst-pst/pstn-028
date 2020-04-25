@@ -1,0 +1,31 @@
+\begin{thebibliography}{}
+\providecommand\natexlab[1]{#1}
+\providecommand\JournalTitle[1]{#1}
+
+\bibitem[{Jones(2020)}]{PSTN-007}
+Jones, L. 2020, The LSST Scheduler Overview and Performance
+
+\bibitem[{{Li} {et~al.}(2014){Li}, {DePoy}, {Marshall}, {Nagasawa}, {Carona},
+  \& {Boada}}]{Li2014}
+{Li}, T., {DePoy}, D.~L., {Marshall}, J.~L., {et~al.} 2014, Society of
+  Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 9147,
+  {Monitoring the atmospheric throughput at Cerro Tololo Inter-American
+  Observatory with aTmCam}, 91476Z
+
+\bibitem[{{Li} {et~al.}(2016){Li}, {DePoy}, {Marshall}, {Tucker}, {Kessler},
+  {Annis}, {Bernstein}, {Boada}, {Burke}, {Finley}, {James}, {Kent}, {Lin},
+  {Marriner}, {Mondrik}, {Nagasawa}, {Rykoff}, {Scolnic}, {Walker}, {Wester},
+  {Abbott}, {Allam}, {Benoit-L{\'e}vy}, {Bertin}, {Brooks}, {Capozzi}, {Carnero
+  Rosell}, {Carrasco Kind}, {Carretero}, {Crocce}, {Cunha}, {D'Andrea}, {da
+  Costa}, {Desai}, {Diehl}, {Doel}, {Flaugher}, {Fosalba}, {Frieman},
+  {Gaztanaga}, {Goldstein}, {Gruen}, {Gruendl}, {Gutierrez}, {Honscheid},
+  {Kuehn}, {Kuropatkin}, {Maia}, {Melchior}, {Miller}, {Miquel}, {Mohr},
+  {Neilsen}, {Nichol}, {Nord}, {Ogando}, {Plazas}, {Romer}, {Roodman}, {Sako},
+  {Sanchez}, {Scarpine}, {Schubnell}, {Sevilla-Noarbe}, {Smith},
+  {Soares-Santos}, {Sobreira}, {Suchyta}, {Tarle}, {Thomas}, {Vikram}, \& {DES
+  Collaboration}}]{Li2016}
+{Li}, T.~S., {DePoy}, D.~L., {Marshall}, J.~L., {et~al.} 2016,
+  \href{http://dx.doi.org/10.3847/0004-6256/151/6/157}{\JournalTitle{\aj}, 151,
+  157}
+
+\end{thebibliography}

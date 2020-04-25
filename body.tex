@@ -1,28 +1,98 @@
 \section{Introduction}
 
 \begin{itemize}
-	\item Discuss how atmosphere affects photometry
+	\item Discuss how atmosphere affects photometry, systematic errors result most strongly due to water, but also O2, O3 and aerosols
 	
-	\item Discuss needs to constrain atmospheric transmission temporal and spatial structure functions
+	\item Strongly affects supernovae cosmology but also galaxy colors etc \citep{Li2016}
+	
+	\item Analogous strategy was used for DES \citep{Li2014}
+	
+	\item Meeting photometric accuracy requirements mean correction for these errors, requires measurements being made at the same time as LSST observes, ideally along the same line of sight
+	
+	\item Can keep up with main telescope so need different strategy, which means understanding atmospheric transmission temporal and spatial structure functions
 	
 	\item Discuss how these functions will dictate how the AuxTel will move in coordination with LSST.
 	
+	\item A scheduler for the AuxTel will then operate in tandem with the main telescope position/schedule \citep{PSTN-007} to maximize observing efficiency whilst minimizing systematics.
 \end{itemize}
 
 
 
-
-
+\section{Rubin Auxiliary Telescope}
+ 
+\begin{itemize}
+	\item Previously known as the Calypso Telescope on Kitt Peak
+	\item Underwent major refurbishment by ACE, optics and most mechanical aspects remain the same
+	\item Electronics all replaced. New Heindeinhein ring encoders installed on all axes, each with three read heads
+	\item New top end with PI H-824 Hexapod installed. 
+	\item Changed mirror cover to use a 4-petal design
+	\item Now located on Calibration hill in 2 story building. Grating floor used to assist airflow.
+	\item Using a 30ft ash-dome with 4 motors, all 30-phase
+	\item using 4 vent gates, two of which have fans to increase airflow in low-wind conditions
+	\item slew speeds max out at 2 degrees per second (for now), short slew-settle is ~7s therefore slightly slower than main telescope. This affects observation strategy. Big slews are much slower.
+\end{itemize} 
  
 \section{LATISS Instrument Description} 
 
-\section{Outline of Data analysis and how atmosphere parameters are described} 
+\begin{itemize}
+	\item Instrument designed to minimize systematic error in measurements, not optimized for throughput. Designed for use with Ronchi grating (no 2nd order contamination)
+	\item Opted to use a LSST sensor and build a pathfinder instrument for the survey (single CCD but driven by CCS)
+	\item Kept as similiar to LSST camera/ComCam as possible
+	\item results in 2x oversampling but allows the full wavelength range of LSST. Using a focal reducer possible but would have made instrument very compact and increased complexity.
+	\item two wheels, one fixed in translation (filters), wheel holding gratings on a translation stage. Useful for changing spectral resolution from Ronchi gratings.
+	\item Have good and poor seeing modes, R$\sim$120 is required to pull out water vapour with sufficient accuracy
+	\item Camera built at Harvard uses ITL chip controlled by a WREB (REBs were not built yet). Cooled to -100 using Polycold chiller.
+	\item Camera electronics mounted externally to dewar, therefore not under vacuum nor temperature controlled. Expectation of possible gain changing, but measured values show it's very minor (and degenerate with clouds).
+	\item Cable wrap driven by the rotator itself to minimize complexity.
+	\item Camera readout and image handling utilizes a subset of camera hardware and majority of camera software.
+	\item Utilizes header service. Control software used as pathfinder for main telescope \citep{PSTN-007}
+	\item Driven by same scriptQueue and has a scheduler
+\end{itemize}
 
-\section{Description of Survey Completed to measure structure functions } 
+\section{Outline of Data Reduction/Analysis and how atmosphere parameters are described} 
 
-\section{Results}
+Data reduction to be written/described by Merlin/Jeremy. They will provide a description of this area shortly.
 
-\section{AuxTel Observing Stragegy During the survey}
-Determination of AuxTel Observing Strategy with main telescope
+\section{Target Selection and Instrument Configuration(s)}
+\label{sec:targets}
 
-Demonstrate the effects of having/not having the AuxTel running
+\begin{itemize}
+	\item Targets are pre-selected to avoid crowding and any other possible background contamination
+	\item Discussion of stellar type preferences
+	\item Discussion of available targets in the required magnitude range as a function of sky position
+	\item Discussion of instrument configuration, and how observations need to adapt in inclement weather
+\end{itemize}
+
+
+
+\section{A Survey to measure of the Spatial and Temporal Structure Function of the Atmosphere above El Penon}
+
+\begin{itemize}
+	\item Survey conducted to measure and monitor temporal and spatial structure functions
+	\item Chose series of well characterized standards as stars
+	\item monitored set of X stars through the night as they changed in airmass
+	\item Telescope sampled at different cadences, sometimes short and nearby, others accross the sky
+	\item Goal was to determine if coordination of main and auxTel positions are critical or if independent operation is acceptable (more like what atmCam does)
+\end{itemize}
+
+\section{Results of Structure Function Survey}
+
+TBD
+
+\section{AuxTel Scheduled Observing During the Survey}
+
+\subsection{AuxTel Scheduler}
+
+\begin{itemize}
+	\item AuxTel scheduler uses same code as main scheduler, but only a single science case
+	\item Critical inputs to AuxTel Scheduler that differ from the main scheduler are seeing, and main telescope position. Seeing affects spectral resolution. 
+	\item clouds and seeing affect required exposure time
+	\item Targets are from the list in section \ref{sec:targets}
+\end{itemize}
+
+\subsection{Observing Strategy during the Survey}
+\begin{itemize}
+	\item Discuss how AuxTel Scheduler uses information from the structure functions to inform observing pattern
+	\item Discuss interactions between Main telescope position and how it affects AuxTel position
+	\item Discuss how observing strategy or instrument setup changes depending on conditions
+\end{itemize}
